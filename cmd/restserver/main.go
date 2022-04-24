@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	. "internal/persistence"
 	. "internal/web/rest"
 	"log"
 	"net/http"
@@ -11,6 +12,8 @@ import (
 
 func main() {
 	fmt.Println("Meilleur API au monde, réalisé avec Gorilla Mux Routers !")
+	InitialiseDB()
+	defer CloseDatabase()
 
 	// Instance of mux router
 	r := mux.NewRouter()

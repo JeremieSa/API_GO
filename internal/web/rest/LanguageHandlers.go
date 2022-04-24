@@ -12,7 +12,10 @@ import (
 	"github.com/gorilla/mux"
 )
 
-var intLang persistence.LanguageDAOMemory
+// In case you want to use the memory implementation, use this line of code instead of the next one
+// var intLang persistence.LanguageDAOMemory
+
+var intLang persistence.LanguageDAOBolt
 var lang entities.Language
 
 func GetOneLanguage(w http.ResponseWriter, r *http.Request) {

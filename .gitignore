@@ -5,6 +5,10 @@
 *.so
 *.dylib
 
+# Database
+*.db
+*.db.lock
+
 # Test binary, built with `go test -c`
 *.test
 

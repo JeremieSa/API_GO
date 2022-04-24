@@ -9,5 +9,5 @@ type Languages interface {
 	Delete(code string) bool
 	Create(Language Language) bool
 	Update(Language Language) bool
-	NewLanguageDAOMemory() LanguageDAOMemory
+	NewLanguageDAOMemory() LanguageDAOMemory // TODO should be renamed
 }
