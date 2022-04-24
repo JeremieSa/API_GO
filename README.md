@@ -26,7 +26,7 @@ Students
 * DELETE | DeleteStudentByIdHandler | Supprime un étudiant selon son ID | http://localhost:8080/rest/languages/[id]
 
 ### Comment tester facilement ces opérations ?
-Je conseil d'utiliser Postman pour cela.
+Je conseil d'utiliser Postman pour cela. Pour se faire j'ai mis dans le dossiers "tests" des json qui peuvent facilement être importé dans ce logiciel afin d'avoir toutes les commandes déjà faites pour tester l'API.
 
 ## Base de donnée en mémoire et sur Bolt
 Les deux types de base de donnée en mémoire et sur Bolt fonctionnent.
