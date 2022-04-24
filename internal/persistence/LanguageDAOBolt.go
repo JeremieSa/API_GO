@@ -6,6 +6,7 @@ import (
 	"errors"
 	"fmt"
 	. "internal/entities/language"
+	"sort"
 
 	"github.com/boltdb/bolt"
 )
@@ -36,6 +37,7 @@ func (l LanguageDAOBolt) FindAll() []Language {
 		return nil
 	})
 
+	sort.Sort(LanguageList(languages))
 	return languages
 }
 

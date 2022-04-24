@@ -6,6 +6,7 @@ import (
 	"errors"
 	"fmt"
 	. "internal/entities/student"
+	"sort"
 
 	"github.com/boltdb/bolt"
 )
@@ -36,6 +37,7 @@ func (l StudentDAOBolt) FindAll() []Student {
 		return nil
 	})
 
+	sort.Sort(StudentList(Students))
 	return Students
 }
 
