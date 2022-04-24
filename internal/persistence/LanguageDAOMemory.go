@@ -2,6 +2,7 @@ package persistence
 
 import (
 	. "internal/entities/language"
+	"sort"
 )
 
 type LanguageDAOMemory struct{}
@@ -12,9 +13,12 @@ var mapLanguage = make(map[string]Language)
 
 func (l LanguageDAOMemory) FindAll() []Language {
 	var tabLanguage []Language
+
 	for _, language := range mapLanguage {
 		tabLanguage = append(tabLanguage, language)
 	}
+	sort.Sort(LanguageList(tabLanguage))
+
 	return tabLanguage
 }
 

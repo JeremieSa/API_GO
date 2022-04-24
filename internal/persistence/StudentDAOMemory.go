@@ -2,6 +2,7 @@ package persistence
 
 import (
 	. "internal/entities/student"
+	"sort"
 )
 
 var studentMap = make(map[int]Student)
@@ -10,13 +11,13 @@ type StudentDAOMemory struct{}
 
 var _ StudentDAOInterface = (*StudentDAOMemory)(nil)
 
-// (s StudentDAOMemory)
 func (s StudentDAOMemory) FindAll() []Student {
 	var result []Student
 
 	for _, element := range studentMap {
 		result = append(result, element)
 	}
+	sort.Sort(StudentList(result))
 
 	return result
 }

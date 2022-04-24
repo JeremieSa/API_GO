@@ -7,7 +7,7 @@ type Language struct {
 	Name string
 }
 
-type languageList []Language
+type LanguageList []Language
 
 func NewLanguage(code string, name string) Language {
 	return Language{
@@ -16,15 +16,15 @@ func NewLanguage(code string, name string) Language {
 	}
 }
 
-func (l languageList) Len() int {
+func (l LanguageList) Len() int {
 	return len(l)
 }
 
-func (l languageList) Less(i, j int) bool {
-	return strings.Compare(l[i].Code, l[j].Code) > 0
+func (l LanguageList) Less(i, j int) bool {
+	return strings.Compare(l[i].Code, l[j].Code) < 0
 }
 
-func (l languageList) Swap(i, j int) {
+func (l LanguageList) Swap(i, j int) {
 	l[i], l[j] = l[j], l[i]
 }
 
