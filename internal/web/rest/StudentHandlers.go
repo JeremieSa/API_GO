@@ -13,7 +13,8 @@ import (
 	"github.com/gorilla/mux"
 )
 
-var intStud persistence.StudentDAOMemory
+// var intStud persistence.StudentDAOMemory
+var intStud persistence.StudentDAOBolt
 var stud entities.Student
 
 func GetOneStudent(w http.ResponseWriter, r *http.Request) {
